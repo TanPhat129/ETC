@@ -1,0 +1,36 @@
+# Example configuration for Facebook account pools.
+# Copy this file to: config/account_pools.yaml
+# Then replace placeholder values with your local/private configuration.
+# Do not commit the real account_pools.yaml if it contains real Facebook UIDs.
+
+shard_pause_seconds: 45
+account_shard_timeout_seconds: 900
+
+accounts:
+  - id: fb_001
+    facebook_uid: "YOUR_FACEBOOK_UID"
+    profile_path: .secrets/facebook-profiles/YOUR_FACEBOOK_UID
+    status: AVAILABLE
+    enabled: true
+
+pools:
+  - id: pilot_hcm
+    account_ids:
+      - fb_001
+    max_concurrent_accounts: 1
+
+sources:
+  - id: fb_group_example
+    name: "Example Facebook Group"
+    platform: facebook
+    source_url: "https://www.facebook.com/groups/EXAMPLE_GROUP"
+    enabled: true
+
+assignments:
+  - pool_id: pilot_hcm
+    account_id: fb_001
+    source_id: fb_group_example
+    shard: 1
+    priority: 100
+    enabled: true
+    backup: false

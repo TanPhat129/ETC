@@ -1,0 +1,16 @@
+# Example source configuration.
+# Copy this file to: config/sources.yaml
+# Then replace placeholder values with your local/private configuration.
+# Do not commit the real sources.yaml if it contains real Facebook account UIDs.
+
+defaults:
+  platform: facebook
+  enabled: true
+  collection_interval_minutes: 30
+  allowed_account_uids:
+    - "YOUR_FACEBOOK_UID"
+
+sources:
+  - id: fb_group_example
+    name: "Example Facebook Group"
+    source_url: "https://www.facebook.com/groups/EXAMPLE_GROUP"

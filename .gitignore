@@ -11,8 +11,13 @@ google-service-account.json
 *.pem
 *.key
 
+# Real local configs
+config/account_pools.yaml
+config/sources.yaml
+
 # Browser profiles / sessions
 facebook-profiles/
+.secrets/facebook-profiles/
 
 # Logs
 logs/
@@ -40,6 +45,10 @@ env/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
 
 # Build / packaging artifacts
 build/
