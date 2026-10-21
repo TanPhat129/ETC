@@ -1,0 +1,11 @@
+facebook_post_search:
+  enabled: true
+  queries:
+  - cần gia sư
+  - tìm gia sư
+  max_posts_per_query: 20
+  account_ids:
+  - fb_001
+  - fb_002
+  - fb_003
+  - fb_004

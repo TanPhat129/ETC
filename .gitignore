@@ -1,0 +1,47 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Secrets / credentials
+.secrets/
+credentials.json
+service-account.json
+google-service-account.json
+*.pem
+*.key
+
+# Browser profiles / sessions
+facebook-profiles/
+
+# Logs
+logs/
+*.log
+
+# Local / generated data
+data/
+
+# Backups
+*.bak
+*.backup
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build / packaging artifacts
+build/
+dist/
+*.spec
